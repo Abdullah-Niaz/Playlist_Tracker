@@ -1,0 +1,118 @@
+
+# 🎵 Playlist Tracker
+
+A full-stack application that allows users to track and analyze YouTube playlists by fetching detailed information such as total duration, video count, and other metadata.
+
+✨ Built with a **Django REST API backend** and a **React frontend**, the project provides a clean and interactive UI for playlist insights.
+
+---
+
+## 🚀 Features
+
+* Fetch playlist details using YouTube API.
+* Display playlist title, number of videos, and total duration.
+* Interactive frontend built with React.
+* Secure API integration with Django REST Framework.
+* Error handling for invalid or private playlists.
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend (React)**
+
+* ⚛️ React (Hooks + Functional Components)
+* 🎨 Tailwind CSS (styling)
+* 🌐 Axios (API calls)
+
+### **Backend (Django + DRF)**
+
+* 🐍 Django
+* ⚡ Django REST Framework (API handling)
+* 🔑 Python Decouple (for environment variables)
+* 🌍 CORS Headers (to allow React-Django communication)
+
+### **API**
+
+* 📺 YouTube Data API v3
+
+---
+
+## 📸 Screenshot
+
+![Playlist Tracker Screenshot](./Images/ss.png)
+
+---
+
+## 📂 Project Structure
+
+```
+playlist-tracker/
+│
+├── backend/                # Django backend
+│   ├── playlist_api/       # API app (views, urls, serializers)
+│   ├── settings.py         # Configurations + CORS + API Key (hidden in .env)
+│   └── ...
+│
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── components/     # React components
+│   │   ├── App.jsx
+│   │   └── index.js
+│   └── ...
+│
+├── .env                    # API keys & environment variables
+├── README.md
+└── ...
+```
+
+---
+
+## ⚡ Setup Instructions
+
+### **Backend (Django)**
+
+```bash
+cd backend
+python -m venv env
+source env/bin/activate   # On Windows: env\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+### **Frontend (React)**
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+---
+
+## 🔒 API Key Security
+
+* Store your **YouTube API Key** inside `.env` in Django:
+
+  ```
+  YOUTUBE_API_KEY=your_api_key_here
+  ```
+* Never commit `.env` (add it to `.gitignore`).
+* On deployment, use environment variables provided by the hosting platform (e.g., Vercel, Heroku, Render).
+
+---
+
+## 🚀 Future Enhancements
+
+* Add user authentication for personalized playlist tracking.
+* Support for Spotify playlists.
+* Dark/light theme toggle.
+* Export playlist details to CSV/Excel.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
